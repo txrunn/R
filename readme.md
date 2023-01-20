@@ -3,7 +3,6 @@ This folder contains R scripts and data for various data analysis and machine le
 
 ## Contents
 
-#
 ### [iris_classification.R](R/iris-classification.R)
 This script demonstrates building classification models using the Support Vector Machine (SVM) algorithm with a polynomial kernel. The script uses the popular iris dataset, which contains 150 observations of iris flowers, with four features (sepal length, sepal width, petal length, and petal width) and three different species of iris (setosa, versicolor, and virginica).
 
