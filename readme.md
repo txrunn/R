@@ -47,7 +47,22 @@ The script then uses the train function from the caret library to build the line
 1. Install the required libraries by running `install.packages(c("mlbench", "caret"))` in R or Rstudio.
 2. Run the script in R or Rstudio by navigating to the script directory and running `source("boston-housing-linear-regression.R")`
 
+#
+
+### [shiny-network-map.R](R/shiny-network-map.R)
+is a work in progress and is intended to scan the network and map out the open ports visually. The current script is a skeleton and only includes the basic functionality for running a network scan using the nmap command. The script loads the Shiny library and defines the user interface, which includes an input field for the IP range or hostname, and a button to initiate the scan. The script also defines the server logic, which runs the nmap command with the input IP range or hostname and converts the output to a dataframe. The scan results are then rendered as a table in the output section of the app.
+
+The script also includes an option to launch the browser when the app is run. To run the app, navigate to the script directory and run shinyApp(ui, server, options = "launch.browser").
+
+Please note that the script is still a work in progress and the visual mapping of open ports has not been implemented yet. Once the visual mapping is added, the script will be updated and the readme will reflect the changes.
+
+### Dependencies
+- `shiny`
+- [`nmap`](https://nmap.org/) (should be locally installed)
+
+
+#
+
 ### Additional files
 - Additional scripts and data will continue to be added to this folder as they are created and will be documented in this readme.
-
 
