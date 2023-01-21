@@ -15,6 +15,8 @@ ui <- fluidPage(
   )
 )
 
+# TODO change to -T0 sltealthy slow nmap scan by default and add option to change flags
+
 # Define the server logic
 server <- function(input, output) {
   scan_data <- reactive({
