@@ -3,6 +3,7 @@ library(caret) # For creating the training and testing sets
 library(e1071) # For the SVM model
 library(nnet)  # For the neural network model
 
+# TODO add a function to load the dataset from an API endpoint (e.g. https://www.kaggle.com/devendra416/ddos-dataset-balanced)
 # Loading the balanced DDoS dataset
 ddos_data <- read.csv("/data/final_dataset.csv") # Thank you to the author of the dataset (DEVENDRA on kaggle.com) for making it available
 
