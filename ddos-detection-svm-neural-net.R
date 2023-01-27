@@ -35,8 +35,10 @@ svm_false_positives <- confusionMatrix(svm_predictions, testing$label)$table[2, 
 svm_false_negatives <- confusionMatrix(svm_predictions, testing$label)$table[2, 2]
 
 # Calculate the precision and recall
-svm_precision <- svm_true_positives / (svm_true_positives + svm_false_positives) # The precision is the number of true positives divided by the number of true positives plus the number of false positives
-svm_recall <- svm_true_positives / (svm_true_positives + svm_false_negatives)    # The recall is the number of true positives divided by the number of true positives plus the number of false negatives
+# The precision is the number of true positives divided by the number of true positives plus the number of false positives
+svm_precision <- svm_true_positives / (svm_true_positives + svm_false_positives)
+# The recall is the number of true positives divided by the number of true positives plus the number of false negatives
+svm_recall <- svm_true_positives / (svm_true_positives + svm_false_negatives)
 
 # Training the neural network model
 nn_model <- nnet(label ~ .,                   # The model will be trained to predict the label column which is whether or not the packet is a DDoS attack
@@ -58,5 +60,5 @@ nn_false_positives <- confusionMatrix(nn_predictions, testing$label)$table[2, 1]
 nn_false_negatives <- confusionMatrix(nn_predictions, testing$label)$table[2, 2]
 
 # Calculate the precision and recall
-nn_precision <- nn_true_positives / (nn_true_positives + nn_false_positives) # The precision is the number of true positives divided by the number of true positives plus the number of false positives
-nn_recall <- nn_true_positives / (nn_true_positives + nn_false_negatives)    # The recall is the number of true positives divided by the number of true positives plus the number of false negatives
+nn_precision <- nn_true_positives / (nn_true_positives + nn_false_positives)
+nn_recall <- nn_true_positives / (nn_true_positives + nn_false_negatives)
