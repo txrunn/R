@@ -21,13 +21,13 @@ ui <- fluidPage(
 server <- function(input, output) {
   scan_data <- reactive({
     if (input$scan > 0) {  # Check if the scan button is clicked
-      system_output <- system(paste("nmap -p-", 
+      system_output <- system(paste("nmap -p-",
                                     input$ip), intern = TRUE)  # Run the 'nmap' command with the input IP range or hostname
       scan <- as.data.frame(system_output)  # Convert the output to a dataframe
       return(scan)  # Return the scan results
     }
   })
-  
+
   # Render the scan results as a table
   output$results <- renderTable({
     scan_data()
